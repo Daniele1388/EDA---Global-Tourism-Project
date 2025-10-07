@@ -12,8 +12,8 @@ and aligned with the expected 1995–2022 time frame.
 */
 
 
--- Find the date of the first and last data
--- How many years of data are available
+-- Determine the temporal coverage of the dataset by finding 
+-- the earliest and latest available Year and calculating the span in years
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_tourism_industries'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_sdg, fact_tourism_industries
 DECLARE @sql NVARCHAR(MAX);
@@ -28,4 +28,5 @@ INNER JOIN gold.dim_year y
 ON f.Year_key = y.Year_key; ';
 
 EXEC sp_executesql @sql;
+
 
