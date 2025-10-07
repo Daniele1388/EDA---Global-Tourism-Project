@@ -12,7 +12,8 @@ Ideal for understanding the relative weight of each tourism component.
 */
 
 
--- Find Total Values for each Indicator in Fact Views
+-- Aggregate total values by Indicator across the selected Fact view
+-- (filtered by Unit) to compare magnitude and identify top contributors
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_tourism_industries
 DECLARE @Unit NVARCHAR(50) = 'US$ MILLIONS' -- NUMBER, THOUSANDS, US$ MILLIONS
@@ -38,7 +39,8 @@ ORDER BY SUM(f.Value) DESC;';
 EXEC sp_executesql @sql, N'@Unit NVARCHAR(50)', @Unit=@Unit;
 
 
--- Find Total Values for each Country in Fact Views
+-- Aggregate total values by Country across the selected Fact view
+-- (filtered by Unit) to benchmark countries by overall magnitude
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_outbound_tourism'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_sdg, fact_tourism_industries
 DECLARE @Unit NVARCHAR(50) = 'US$ MILLIONS' -- NUMBER, THOUSANDS, US$ MILLIONS
@@ -62,7 +64,8 @@ ORDER BY SUM(f.Value) DESC;';
 EXEC sp_executesql @sql, N'@Unit NVARCHAR(50)', @Unit=@Unit;
 
 
--- How is distribute the volume through the years?
+-- Show how records are distributed over time:
+-- count rows and covered countries per Year for the selected Fact view
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism';
 DECLARE @sql NVARCHAR(MAX);
@@ -81,7 +84,8 @@ ORDER BY d.Year;';
 EXEC sp_executesql @sql;
 
 
--- Which years has the most volumes in each Fact Views?
+-- Identify the Year with the highest volume (row count and countries covered)
+-- within the selected Fact view
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_tourism_industries'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_sdg, fact_tourism_industries
 DECLARE @sql NVARCHAR(MAX);
@@ -107,7 +111,8 @@ ORDER BY t.Number_Rows DESC;';
 EXEC sp_executesql @sql;
 
 
--- Totals by indicator and unit for a country
+-- Totals by Indicator for a specific Country and Unit
+-- useful to profile the country’s tourism composition
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_tourism_industries'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_tourism_industries
 DECLARE @Unit NVARCHAR(50) = 'NUMBER' -- NUMBER, THOUSANDS, US$ MILLIONS
@@ -134,7 +139,8 @@ ORDER BY SUM(f.Value) DESC;';
 EXEC sp_executesql @sql, N'@Country NVARCHAR(MAX), @Unit NVARCHAR(50)', @Unit=@Unit, @Country=@Country;
 
 
--- Retrieves percentage and average-stay indicators for all countries (industries)
+-- Retrieve percentage- and average-stay–type indicators (industries)
+-- for a given Country and Unit (PERCENT or AVG_NIGHTS)
 
 DECLARE @Unit NVARCHAR(50) = 'PERCENT' -- PERCENT, AVG_NIGHTS
 DECLARE @Country NVARCHAR(MAX) = 'Italy'
@@ -158,7 +164,8 @@ WHERE m.Measure_Units = @Unit AND c.Country_name = @Country
 ORDER BY c.Country_name
 
 
--- Retrieves a specific indicator value for a country and year
+-- Look up a specific Indicator value for a given Country, Year, and Unit
+-- (point query; useful for validation and spot checks)
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_tourism_industries
 DECLARE @Country NVARCHAR(MAX) = 'France'
