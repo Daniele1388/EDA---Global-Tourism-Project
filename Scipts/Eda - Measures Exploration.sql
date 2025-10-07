@@ -12,7 +12,8 @@ Useful for early quality control in the analytical pipeline.
 */
 
 
--- Find the Total Values
+-- Compute total values by Unit of Measure for the selected Fact view
+-- (NUMBER, THOUSANDS, US$ MILLIONS) to validate scaling and magnitude
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_sdg, fact_tourism_industries
 DECLARE @sql NVARCHAR(MAX);
@@ -30,7 +31,8 @@ GROUP BY d.Measure_Units;';
 EXEC sp_executesql @sql
 
 
--- Percent out of bounds
+-- Flag percentage values outside the valid [0, 100] range
+-- for early data-quality checks (industries and SDG facts)
 
 SELECT
 	f.Year_key,
