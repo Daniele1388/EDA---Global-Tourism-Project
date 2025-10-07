@@ -41,7 +41,8 @@ FROM gold.dim_year
 ORDER BY Year
 
 
--- How many Countries/Indicators/Years/Units do we have in each Fact Views?
+-- Count distinct Countries, Indicators, Years, and Units per Fact view 
+-- to validate data completeness
 
 DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_tourism_industries'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_tourism_industries
 DECLARE @sql NVARCHAR(MAX);
@@ -64,5 +65,6 @@ SELECT
 	COUNT(DISTINCT Year_key) AS n_years,
 	COUNT(DISTINCT Units_key) AS n_units
 FROM gold.fact_sdg -- fact_sdg does not have the column 'Indicator_key', so we run this query separately
+
 
 
