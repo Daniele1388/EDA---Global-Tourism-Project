@@ -39,7 +39,7 @@ All EDA modules are written in **T-SQL** and fully documented.
 Each script can be executed independently, using dynamic parameters (`@FactViews`, `@Unit`, `@Year`, `@Country`, etc.).  
 
 | Category | Description |
-|-----------|------|-------------|
+|----------|-------------|
 | 🧱 Database Exploration | Lists all objects and columns to understand schema design. |
 | 🌍 Dimensions Exploration | Retrieves distinct Countries, Indicators, Years, and Units to verify data coverage. |
 | 📅 Date Exploration | Finds first and last year available; checks time range (1995–2022). |
