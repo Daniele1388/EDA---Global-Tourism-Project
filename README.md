@@ -77,7 +77,6 @@ Key aspects validated include:
 - **SQL Server (T-SQL)** — Analysis and validation queries.  
 - **Draw.io** — EDA conceptual map (`docs/Eda_Map.png`).  
 - **GitHub** — Repository management and documentation.  
-- **Excel / Tableau (optional)** — Additional exploratory visualization.
 
 ---
 
