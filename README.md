@@ -85,8 +85,6 @@ Key aspects validated include:
 ```
 global-tourism-eda/
 │
-├── datasets/ # Optional: CSV extracts or EDA samples
-│
 ├── scripts/
 │ └── eda/
 │ ├── Eda - Database Exploration.sql
