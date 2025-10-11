@@ -98,7 +98,7 @@ global-tourism-eda/
 │ └── Eda - Ranking.sql
 │
 ├── docs/
-│ ├── Eda Map.png
+│ ├── Eda_Map.png
 │ ├── types_of_tourism.md
 │ ├── tourism_indicators_glossary_gold.md
 │ └── ...
