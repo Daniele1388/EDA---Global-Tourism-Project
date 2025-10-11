@@ -7,6 +7,19 @@ The EDA was entirely developed in **T-SQL**, following a structured, repeatable,
 
 ---
 
+## 📦 Data Source Dependency
+
+The datasets analyzed in this EDA are derived from the **Gold Layer** of the  
+[Global Tourism Data Warehouse](https://github.com/Daniele1388/DWH---Global-Tourism-Project) project.  
+
+To run these SQL scripts successfully, ensure that the **Data Warehouse**  
+has been built and the **Gold Layer views** (`fact_domestic_tourism`, `fact_inbound_tourism`, `fact_outbound_tourism`,  
+`fact_tourism_industries`, `fact_sdg`, and their related dimensions) are available in SQL Server.  
+
+The EDA depends on these structures for querying and validation.
+
+---
+
 ## 🗺️ EDA Framework
 
 The EDA process follows a systematic exploration approach, divided into key analytical areas:  
