@@ -21,7 +21,7 @@ The EDA depends on these structures for querying and validation.
 
 The EDA process follows a systematic exploration approach, divided into key analytical areas:  
 
-![EDA Map](docs/Eda_Map.png)
+![EDA Map](Docs/Eda_Map.png)
 
 1. **Database Exploration** → Understanding the database structure and objects.  
 2. **Dimensions Exploration** → Reviewing unique values and coverage for key dimensions.  
