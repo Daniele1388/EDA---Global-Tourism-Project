@@ -67,7 +67,7 @@ EXEC sp_executesql @sql, N'@Unit NVARCHAR(50)', @Unit=@Unit;
 -- Show how records are distributed over time:
 -- count rows and covered countries per Year for the selected Fact view
 
-DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism';
+DECLARE @FactViews NVARCHAR(MAX) = N'gold.fact_domestic_tourism'; -- fact_domestic_tourism, fact_inbound_tourism, fact_outbound_tourism, fact_sdg, fact_tourism_industries
 DECLARE @sql NVARCHAR(MAX);
 
 SET @sql = N'
@@ -193,3 +193,4 @@ WHERE c.Country_name = @Country AND y.Year = @Year AND i.Indicator_name = @Indic
 ORDER BY f.Value DESC;';
 
 EXEC sp_executesql @sql, N'@Country NVARCHAR(MAX), @Year BIGINT, @Indicator NVARCHAR(MAX), @Unit NVARCHAR(50)', @Country=@Country, @Year=@Year, @Indicator=@Indicator, @Unit=@Unit;
+
