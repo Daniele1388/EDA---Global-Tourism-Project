@@ -62,9 +62,11 @@ EXEC sp_executesql @sql;
 SELECT 
 	COUNT(*) AS Rows_sdg,
 	COUNT(DISTINCT Country_key) AS n_countries,
+	COUNT(DISTINCT Indicator) AS n_indicator,
 	COUNT(DISTINCT Year_key) AS n_years,
 	COUNT(DISTINCT Units_key) AS n_units
 FROM gold.fact_sdg -- fact_sdg does not have the column 'Indicator_key', so we run this query separately
+
 
 
 
