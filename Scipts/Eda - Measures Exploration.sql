@@ -45,8 +45,10 @@ WHERE f.Units_key = 3 AND CASE WHEN f.Value < 0 OR f.Value > 100 THEN 1 ELSE 0 E
 
 SELECT
 	f.Year_key,
+	f.Indicator,
 	f.Units_key,
 	f.value,
 	CASE WHEN f.Value < 0 OR f.Value > 100 THEN 1 ELSE 0 END AS out_of_bounds
 FROM gold.fact_sdg f
 WHERE f.Units_key = 3 AND CASE WHEN f.Value < 0 OR f.Value > 100 THEN 1 ELSE 0 END = 1
+
