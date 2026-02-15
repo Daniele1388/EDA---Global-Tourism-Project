@@ -1,6 +1,6 @@
 # Exploratory Data Analysis (EDA) – Global Tourism Statistics
 
-Welcome to the **Exploratory Data Analysis (EDA)** section of the **Global Tourism Statistics** project! 🧠  
+Welcome to the **Exploratory Data Analysis (EDA)** section of the **Global Tourism Statistics** project!   
 This part of the repository focuses on analyzing the **Gold Layer** datasets to extract insights, validate data integrity, and prepare for reporting and visualization.  
 
 The EDA was entirely developed in **T-SQL**, following a structured, repeatable, and documented workflow.  
