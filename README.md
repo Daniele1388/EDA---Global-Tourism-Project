@@ -1,4 +1,4 @@
-# 🔍 Exploratory Data Analysis (EDA) – Global Tourism Statistics
+# Exploratory Data Analysis (EDA) – Global Tourism Statistics
 
 Welcome to the **Exploratory Data Analysis (EDA)** section of the **Global Tourism Statistics** project! 🧠  
 This part of the repository focuses on analyzing the **Gold Layer** datasets to extract insights, validate data integrity, and prepare for reporting and visualization.  
@@ -7,7 +7,7 @@ The EDA was entirely developed in **T-SQL**, following a structured, repeatable,
 
 ---
 
-## 📦 Data Source Dependency
+##  Data Source Dependency
 
 The datasets analyzed in this EDA are derived from the **Gold Layer** of the [Global Tourism Data Warehouse](https://github.com/Daniele1388/DWH---Global-Tourism-Project) project.  
 
@@ -17,7 +17,7 @@ The EDA depends on these structures for querying and validation.
 
 ---
 
-## 🗺️ EDA Framework
+##  EDA Framework
 
 The EDA process follows a systematic exploration approach, divided into key analytical areas:  
 
@@ -32,7 +32,7 @@ The EDA process follows a systematic exploration approach, divided into key anal
 
 ---
 
-## 📊 Objectives
+##  Objectives
 
 The goal of this analysis is to:  
 
@@ -43,36 +43,36 @@ The goal of this analysis is to:
 
 ---
 
-## 🧩 EDA Scripts
+##  EDA Scripts
 
 All EDA modules are written in **T-SQL** and fully documented.  
 Each script can be executed independently, using dynamic parameters (`@FactViews`, `@Unit`, `@Year`, `@Country`, etc.).  
 
 | Category | Description |
 |----------|-------------|
-| 🧱 Database Exploration | Lists all objects and columns to understand schema design. |
-| 🌍 Dimensions Exploration | Retrieves distinct Countries, Indicators, Years, and Units to verify data coverage. |
-| 📅 Date Exploration | Finds first and last year available; checks time range (1995–2022). |
-| 📏 Measures Exploration | Calculates totals by unit of measure and flags invalid percentage values. |
-| 📈 Magnitude Analysis | Compares total values by Indicator, Country, and Year to identify dominant contributors. |
-| 🏆 Ranking Analysis | Produces Top-N/Bottom-N rankings by indicator, country, and year. |
+|  Database Exploration | Lists all objects and columns to understand schema design. |
+|  Dimensions Exploration | Retrieves distinct Countries, Indicators, Years, and Units to verify data coverage. |
+|  Date Exploration | Finds first and last year available; checks time range (1995–2022). |
+|  Measures Exploration | Calculates totals by unit of measure and flags invalid percentage values. |
+|  Magnitude Analysis | Compares total values by Indicator, Country, and Year to identify dominant contributors. |
+|  Ranking Analysis | Produces Top-N/Bottom-N rankings by indicator, country, and year. |
 
 ---
 
-## 🧠 Insights & Methodology
+##  Insights & Methodology
 
 The EDA is designed to ensure that analytical outputs from the **Gold Layer** are both valid and meaningful.  
 
 Key aspects validated include:
-- ✅ Referential integrity (matching dimension keys).  
-- ✅ Consistent units of measure across indicators.  
-- ✅ No negative or unrealistic percentage values.  
-- ✅ Uniform temporal coverage across fact tables.  
-- ✅ Logical magnitude relationships between inbound, outbound, and domestic datasets.  
+-  Referential integrity (matching dimension keys).  
+-  Consistent units of measure across indicators.  
+-  No negative or unrealistic percentage values.  
+-  Uniform temporal coverage across fact tables.  
+-  Logical magnitude relationships between inbound, outbound, and domestic datasets.  
 
 ---
 
-## 🧮 Example Findings
+##  Example Findings
 
 - **Year coverage** confirmed: 1995 → 2022.  
 - **Units** standardized to `NUMBER`, `THOUSANDS`, and `US$ MILLIONS`.  
@@ -82,7 +82,7 @@ Key aspects validated include:
 
 ---
 
-## 🛠️ Tools & Environment
+##  Tools & Environment
 
 - **SQL Server (T-SQL)** — Analysis and validation queries.  
 - **Draw.io** — EDA conceptual map (`docs/Eda_Map.png`).  
@@ -90,7 +90,7 @@ Key aspects validated include:
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 global-tourism-eda/
@@ -115,25 +115,24 @@ global-tourism-eda/
 
 ---
 
-## 📈 Next Steps
+##  Next Steps
 
 - [ ] Conduct advanced KPI analysis in SQL Server on Global Tourism datasets.  
 - [ ] Build Tableau dashboards to visualize key tourism trends and indicators.  
 
 ---
 
-## 🧾 License
+##  License
 
 This EDA documentation is part of the **Global Tourism Data** project and released under the **MIT License**.  
 
 ---
 
-## 🌟 About Me
+## About Me
 
-Hi, I’m **Daniele Amoroso** 👋  
-HR Generalist transitioning into **Data Analytics and Data Science**, with a focus on SQL, Python, and AI Automation.
-
-Currently transitioning into the data field by building portfolio projects that combine technical skills with analytical thinking.
+Hi, I’m **Daniele Amoroso**   
+I like working with data and I’m interested in Data Analytics, Data Science, and AI Automation. 
+I build data projects to understand information and find insights.
 
 Connect: [LinkedIn – Daniele Amoroso](https://www.linkedin.com/in/daniele-a-080786b7/)
 
