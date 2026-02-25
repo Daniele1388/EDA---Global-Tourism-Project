@@ -118,7 +118,6 @@ global-tourism-eda/
 ##  Next Steps
 
 - [ ] Conduct advanced KPI analysis in SQL Server on Global Tourism datasets.  
-- [ ] Build Tableau dashboards to visualize key tourism trends and indicators.  
 
 ---
 
