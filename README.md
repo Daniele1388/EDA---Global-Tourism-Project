@@ -123,7 +123,7 @@ global-tourism-eda/
 
 ##  License
 
-This EDA documentation is part of the **Global Tourism Data** project and released under the **MIT License**.  
+This repository is part of the **Global Tourism Statistics** ecosystem and released under the **MIT License**.  
 
 ---
 
